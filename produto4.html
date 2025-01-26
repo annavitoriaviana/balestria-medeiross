@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes do Produto - Empenador Gabarito Colador</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .product-detail-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+    }
+
+    .product-image img {
+      width: 350px; /* Tamanho fixo para a imagem */
+      height: auto;
+      border-radius: 10px;
+    }
+
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-left: 20px;
+      max-width: 500px;
+    }
+
+    .product-info h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .price {
+      font-size: 30px;
+      color: #00b09b;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #00b09b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #96c93d;
+    }
+
+    .product-description {
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-description p {
+      font-size: 16px;
+      color: #555;
+    }
+
+    .feedback-section {
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      margin-top: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .feedback-section textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    .feedback-section button {
+      background-color: #ff4d4d;
+    }
+
+    .feedback-section button:hover {
+      background-color: #ff1a1a;
+    }
+
+    button:focus {
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="product-detail-container">
+    <div class="product-image">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_912660-MLB77116291063_062024-O.webp" alt="Produto 4">
+    </div>
+    <div class="product-info">
+      <h2>Empenador Gabarito Colador - Penas De Flechas Até 5 Pol.</h2>
+      <p class="price">R$ 216,00</p>
+      <button onclick="addToCart('Empenador Gabarito Colador', 216.00)">Adicionar ao Carrinho</button>
+    </div>
+  </div>
+
+  <div class="product-description">
+    <p><strong>Descrição:</strong> Produzido por instrutor de tiro com arco e arqueiro com mais de 15 anos de experiência!
+
+        Sabe aquelas flechas encostadas por algum dano às penas naturais ou sintéticas? Agora você pode recuperá-las, economizando muito com flechas novas!
+        
+        Ideal também para fabricação e montagem de flechas para arcos em geral.</p>
+  </div>
+
+  <div class="feedback-section">
+    <label for="feedback">Deixe seu feedback:</label><br>
+    <textarea id="feedback" rows="4" cols="50" placeholder="Escreva sua opinião..."></textarea><br>
+    <button onclick="submitFeedback()">Enviar Feedback</button>
+  </div>
+
+  <button onclick="window.history.back()">Voltar</button>
+
+  <script>
+    // Adiciona ao carrinho
+    function addToCart(productName, price) {
+      alert(productName + " foi adicionado ao carrinho por R$ " + price);
+    }
+
+    // Envia feedback
+    function submitFeedback() {
+      var feedback = document.getElementById("feedback").value;
+      if(feedback.trim() !== "") {
+        alert("Feedback enviado: " + feedback);
+        document.getElementById("feedback").value = ""; // Limpa o campo de feedback
+      } else {
+        alert("Por favor, escreva um feedback.");
+      }
+    }
+  </script>
+
+</body>
+</html>

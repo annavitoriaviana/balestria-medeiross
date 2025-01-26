@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Balestreria Medeiros</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Página inicial -->
+  <div class="home-page" id="home-page">
+    <div class="home-content">
+      <div class="logo-container">
+        <img src="imagem/WhatsApp Image 2025-01-21 at 11.44.00 (1).jpeg" alt="Logo da Loja" class="logo">
+      </div>
+      <div class="title-container">
+        <h1>Balestreia Medeiros</h1>
+      </div>
+      <div class="video-container">
+        <iframe width="560" height="315" src="https://youtu.be/4xR8hAPMis4?si=XivrEnMDZMNryjSQi" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <button class="start-btn" onclick="startShopping()">Iniciar</button>
+    </div>
+  </div>
+
+  <!-- Página de produtos -->
+  <div class="product-page" id="product-page" style="display:none;">
+    <header>
+      <div class="logo">Balestreia Medeiros</div>
+      <input type="text" class="search-bar" placeholder="Pesquisar produtos" onkeyup="searchProducts()">
+      <button class="cart-btn" onclick="openCart()">
+        <img src="https://img.icons8.com/ios/50/ffffff/shopping-cart.png" alt="Carrinho">
+      </button>
+    </header>
+    <div class="products" id="products">
+      <!-- Produtos -->
+      <div class="product">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_779593-MLB75871802003_042024-O.webp" alt="Produto 1">
+        <h3><a href="produto1.html">Coronha Stock</a></h3>
+        <p><strong>R$ 169,00</strong></p>
+        <button onclick="addToCart('Coronha Stock', 169.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_841719-MLB77014947401_062024-O.webp" alt="Produto 2">
+        <h3><a href="produto2.html">3 Bastões De Cera Para Corda</a></h3>
+        <p><strong>R$ 38,90</strong></p>
+        <button onclick="addToCart('3 Bastões de cera Para Corda', 38.90)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_988191-MLB75871670035_042024-O.webp" alt="Produto 3">
+        <h3><a href="produto3.html">uQebra Chamas Cbc 7022</a></h3>
+        <p><strong>R$ 86,00</strong></p>
+        <button onclick="addToCart(' Chamas Cbc 7022', 86.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_912660-MLB77116291063_062024-O.webp" alt="Produto 4">
+        <h3><a href="produto4.html">Empenador Gabarito Colador</a></h3>
+        <p><strong>R$ 216,00</strong></p>
+        <button onclick="addToCart('EMPENADOR GABARITO COLADOR', 216.00)">Adicionar ao Carrinho</button>
+      </div>
+      <div class="product">
+        <img src="https://http2.mlstatic.com/D_NQ_NP_843139-MLB46279424205_062021-O.webp" alt="Produto 5">
+        <h3><a href="produto5.html">Porta Caneta/sabre Escritório Geek Star Wars Darth Vader</a></h3>
+        <p><strong>R$ 230,00</strong></p>
+        <button onclick="addToCart('Gabarito Colador', 230.00)">Adicionar ao Carrinho</button>
+      </div>
+      
+    </div>
+  </div>
+
+  <div class="cart" id="cart">
+    <h2>Carrinho de Compras</h2>
+    <ul id="cart-items"></ul>
+    <p id="total-price">Total: R$ 0,00</p>
+    <button onclick="sendCartToWhatsApp()">Enviar para WhatsApp</button>
+    <button onclick="closeCart()">Fechar</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
